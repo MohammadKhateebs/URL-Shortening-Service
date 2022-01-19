@@ -20,6 +20,7 @@ class CreateUrlshortsTable extends Migration
             $table->string('url_short');
             $table->string('vist')->default(0);
             $table->timestamps();
+
         });
     }
 

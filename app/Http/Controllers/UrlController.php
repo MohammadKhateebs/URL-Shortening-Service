@@ -17,15 +17,15 @@ if($request->url_short){
 
     ]);
     if($newurl){
-        $shorturl=base_convert($newurl->id,10,36);
+        $shorturl=uniqid();
         $newurl->update([
             'url_user'=>$shorturl
         ]);
-        return redirect()-> back() -> with('message','your Url short is : <a style="color:green;" href="'.url($shorturl).'">'.url($shorturl));
+        return redirect()-> back() -> with('message','<br><h5 class="">your Url short is</h5> : <a style="color:green;" href="'.url($shorturl).'">'.url($shorturl));
 
 
     }
-}   
+}
 return back();
 
 
