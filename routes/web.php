@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UrlController;
+use App\Http\Controllers\UserLinksController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +25,27 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-#oute::post('addcourse', 'AdminController@addcourse')->name('addcourse');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/links',[UserLinksController::class,'index'])->name('user.links')->middleware('auth');
+
+
+
 Route::post('/short-url',[UrlController::class,'urlshort'])->name('short');
 Route::get('/{url}',[UrlController::class,'show'])->name('show');
+
+
 

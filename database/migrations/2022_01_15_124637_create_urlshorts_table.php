@@ -16,7 +16,7 @@ class CreateUrlshortsTable extends Migration
         Schema::create('urlshorts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained();
-            $table->text('url_user');
+            $table->text('url_user')->nullable();
             $table->string('url_short');
             $table->string('vist')->default(0);
             $table->timestamps();

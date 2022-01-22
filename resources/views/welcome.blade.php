@@ -431,7 +431,7 @@
                 Short url
                 <br>
                 <div>
-                    <h4 class="col-6">
+                    <h4>
                         @if(session('message'))
                         {!! session('message')!!}
                         @endif
